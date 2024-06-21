@@ -13,7 +13,7 @@
 
     <properties>
         <java.version>11</java.version>
-        <spring.boot.version>2.6.3</spring.boot.version>
+        <spring.boot.version>2.7.18</spring.boot.version>
         <springdoc.version>1.5.9</springdoc.version>
         <jackson.version>2.12.5</jackson.version>
     </properties>
@@ -102,13 +102,18 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring.boot.version}</version>
-                <!-- <executions>
+                <!-- <configuration>
+                    <mainClass>com.example.petstore.PetstoreApplication</mainClass>
+                    <layout>ZIP</layout>
+                </configuration>
+                -->
+                <executions>
                     <execution>
                         <goals>
-                            <goal></goal>
+                            <goal>repackage</goal>
                         </goals>
                     </execution>
-                </executions> -->
+                </executions> 
             </plugin>
             
             <!-- Maven Compiler Plugin -->
