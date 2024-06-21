@@ -23,6 +23,7 @@ curl -X POST "http://localhost:8080/pets" \
 
 curl -X GET "http://localhost:8080/pets" -H "accept: application/json"
 
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -53,7 +54,10 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
+```
 
+
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -66,3 +70,4 @@ spec:
   selector:
     app: petstore
   type: ClusterIP
+```
